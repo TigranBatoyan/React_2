@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import { example, dummy } from './Constant';
 import Form from './Components/Form/Form';
-import List from './Components/List/List'
+import List from './Components/List/List';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -15,9 +15,22 @@ class App extends Component {
   }
 
   onItemCreate = (data) =>{
+
+    // if (data.id) {
+    //   const newEvents = this.state.datas.map((event) => {
+    //     return event.id === data.id ? data : event
+    //   })
+    //   this.setState({
+    //     ...this.state,
+    //     datas: [ ...newEvents ],
+    //     example: { ...example  }
+    //   })
+    //   return
+    // }
+
     this.setState({
       datas:[...this.state.datas,data],
-      example
+      example:{...example}
     })
   }
 
@@ -35,6 +48,7 @@ class App extends Component {
       return data.id === id
     });
     this.setState({
+      ...this.state,
       example:findData,
     })
   }
