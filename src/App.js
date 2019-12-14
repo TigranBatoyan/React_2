@@ -4,6 +4,7 @@ import { example, dummy } from './Constant';
 import Form from './Components/Form/Form';
 import List from './Components/List/List';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './redux/store/store'
 
 class App extends Component {
   constructor(props){
