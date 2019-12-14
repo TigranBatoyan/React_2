@@ -16,17 +16,17 @@ class App extends Component {
 
   onItemCreate = (data) =>{
 
-    // if (data.id) {
-    //   const newEvents = this.state.datas.map((event) => {
-    //     return event.id === data.id ? data : event
-    //   })
-    //   this.setState({
-    //     ...this.state,
-    //     datas: [ ...newEvents ],
-    //     example: { ...example  }
-    //   })
-    //   return
-    // }
+    if (data.id) {
+      const newEvents = this.state.datas.map((event) => {
+        return event.id === data.id ? data : event
+      })
+      this.setState({
+        ...this.state,
+        datas: [ ...newEvents ],
+        example: { ...example  }
+      })
+      return
+    }
 
     this.setState({
       datas:[...this.state.datas,data],
